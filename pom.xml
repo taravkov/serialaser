@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>ru.taravkov.serialaser</groupId>
+    <artifactId>serialaser-all</artifactId>
+    <version>1.0.RELEASE</version>
+
+    <packaging>pom</packaging>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <jdk.version>1.8</jdk.version>
+        <maven.compiler.version>3.2</maven.compiler.version>
+        <maven.javadoc.version>2.10.3</maven.javadoc.version>
+        <maven.source.version>3.0.0</maven.source.version>
+        <maven.surfire.version>2.18.1</maven.surfire.version>
+        <junit.version>4.12</junit.version>
+        <serialaser.version>1.0.RELEASE</serialaser.version>
+        <netty.version>4.0.36.Final</netty.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>ru.taravkov.serialaser</groupId>
+                <artifactId>serialaser-core</artifactId>
+                <version>${serialaser.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ru.taravkov.serialaser</groupId>
+                <artifactId>serialaser-test</artifactId>
+                <version>${serialaser.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ru.taravkov.serialaser</groupId>
+                <artifactId>serialaser-benchmark</artifactId>
+                <version>${serialaser.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-codec</artifactId>
+                <version>${netty.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <modules>
+        <module>core</module>
+        <module>test</module>
+        <module>benchmark</module>
+    </modules>
+</project>
